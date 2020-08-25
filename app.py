@@ -10,10 +10,10 @@ model = load_model('deeplearning.h5')
 def home():
     return render_template("index.html")
    
-# @app.route("/predict", methods=["POST"])
-# def predict():
-#     field = request.form.get("field") 
-#     return render_template("index.html", result=result)
+@app.route("/predict", methods=["POST"])
+def predict():
+    field = request.form.get("field") 
+    return render_template("index.html", result=result)
 
 
 if __name__ == "__main__":
