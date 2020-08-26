@@ -5,30 +5,36 @@
     <meta charset="utf-8">
     <title>Student Data Analysis</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/superhero/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
-    <link rel="stylesheet" href="static/css/style.css">
+    <link rel="stylesheet" href="../static/css/style.css">
   </head>
 
 <body>
-  <nav class="navbar navbar-default">
+  <nav class="navbar navbar-dark">
     <div class="container-fluid">
       <div class="navbar-header">
         <a class="navbar-brand" href="index.html">Student Data Analysis
-          
         </a>
       </div>
+      <ul class="navbar-nav ml-auto"> 
+        <li class="nav-item">
+        <a class="nav-link active ml-auto" href="viz.html">Visualiations</a>
+        </li>
+      </ul>
     </div>
   </nav>
-    
+
+  <div class="wrapper">
     <div class="container">
       <div class="row margin-top-50">
-        <div class="col-md-2">
+        <div class="col-md-4">
           <aside class="filters">
             <div class="panel panel-default">
-              <div class="panel-heading">Filter Search</div>
+              <div class="panel-heading" style="color:white;height:50px;text-align:center;">Prediction</div>
               <div class="panel-body">
-                <form>
+                
+                <form>  
                   <div class="form-group">
                     <ul class="list-group" id="filters">
                       <li class="filter list-group-item">
@@ -37,10 +43,12 @@
                           <option>Gabriel Pereira</option>
                           <option>Mousinho da Silveira</option>
                         </select>
+                      </li>
+                      <li class="filter list-group-item">
                         <label for="absences">Enter absences</label>
-                        <select class="form-control" id="">
-                          <option></option>
-                        </select>
+                        <input class="form-control" id="absences" type="number" placeholder="0" min="0" max="93">
+                      </li>
+                      <li class="filter list-group-item">
                         <label for="age">Enter age</label>
                         <select class="form-control" id="">
                           <option>15</option>
@@ -52,7 +60,9 @@
                           <option>21</option>
                           <option>22</option>
                         </select>
-                        <label for="health">Enter Health Status</label>
+                      </li>
+                      <li class="filter list-group-item">
+                        <label for="health">Enter Health Status<br> (1-very bad to 5-very good)</label>
                         <select class="form-control" id="">
                           <option>1</option>
                           <option>2</option>
@@ -60,7 +70,9 @@
                           <option>4</option>
                           <option>5</option>
                         </select>
-                        <label for="Walc">Enter Weekend Alcohol Consumption</label>
+                      </li>
+                      <li class="filter list-group-item">
+                        <label for="Walc">Enter Weekend Alcohol Consumption<br> (1-very low to 5-very high)</label>
                         <select class="form-control" id="">
                           <option>1</option>
                           <option>2</option>
@@ -68,7 +80,9 @@
                           <option>4</option>
                           <option>5</option>
                         </select>
-                        <label for="goout">Enter the outing </label>
+                      </li>
+                      <li class="filter list-group-item">
+                        <label for="goout">Enter the outing<br> (1-very low to 5-very high)</label>
                         <select class="form-control" id="">
                           <option>1</option>
                           <option>2</option>
@@ -76,30 +90,33 @@
                           <option>4</option>
                           <option>5</option>
                         </select>
-                        <label for="subject">Enter the subject </label>
+                      </li>
+                      <li class="filter list-group-item">
+                        <label for="subject">Enter the subject</label>
                         <select class="form-control" id="">
                           <option>Mathematics</option>
                           <option>Portuguese</option>
-                          
                         </select>
                       </li>
                     </ul>
                   </div>
-                  <button id="filter-btn" type="button" class="btn btn-default">Cal Avg Grade</button>
-                  <input class="form-control" id="city" type="text" placeholder="">
+                  <button type="button" class="btn btn-default" style="color:white">Cal Avg Grade</button>
+                  <!-- <input class="form-control" id="city" type="text" placeholder=""> -->
                 </form>
               </div>
             </div>
           </aside>
         </div>
-        
-    <footer class="footer">
-      <span class="bottom"></span>
-    </footer>
+      </div>
+    </div>
   </div>
+    <footer class="footer">
+      <span class="bottom">&copy; Copyright 2020</span>
+    </footer>
+  
   <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.11.0/d3.js"></script>
   
-  <script src="static/js/app.js"></script>
+  <script src="../static/js/app.js"></script>
 </body>
 
 </html>
