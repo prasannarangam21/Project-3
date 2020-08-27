@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html>
 
-  <head>
-    <meta charset="utf-8">
-    <title>Student Data Analysis</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
-    <link rel="stylesheet" href="../static/css/style.css">
-  </head>
+<head>
+  <meta charset="utf-8">
+  <title>Student Data Analysis</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+  <link rel="stylesheet" href="../static/css/style.css">
+</head>
 
 <body>
   <nav class="navbar navbar-dark">
@@ -17,9 +17,9 @@
         <a class="navbar-brand" href="index.html">Student Data Analysis
         </a>
       </div>
-      <ul class="navbar-nav ml-auto"> 
+      <ul class="navbar-nav ml-auto">
         <li class="nav-item">
-        <a class="nav-link active ml-auto" href="viz.html">Visualiations</a>
+          <a class="nav-link active ml-auto" href="viz.html">Visualiations</a>
         </li>
       </ul>
     </div>
@@ -33,19 +33,19 @@
             <div class="panel panel-default">
               <div class="panel-heading" style="color:white;height:50px;text-align:center;">Prediction</div>
               <div class="panel-body">
-                
-                <form>  
+
+                <form>
                   <div class="form-group">
                     <ul class="list-group" id="filters">
-                      <li class="filter list-group-item">
+                      <!-- <li class="filter list-group-item">
                         <label for="School">Enter student School</label>
                         <select class="form-control" id="">
                           <option>Gabriel Pereira</option>
                           <option>Mousinho da Silveira</option>
                         </select>
-                      </li>
+                      </li> -->
                       <li class="filter list-group-item">
-                        <label for="absences">Enter absences</label>
+                        <label for="absences">Enter Freetime</label>
                         <input class="form-control" id="absences" type="number" placeholder="0" min="0" max="93">
                       </li>
                       <li class="filter list-group-item">
@@ -91,13 +91,6 @@
                           <option>5</option>
                         </select>
                       </li>
-                      <li class="filter list-group-item">
-                        <label for="subject">Enter the subject</label>
-                        <select class="form-control" id="">
-                          <option>Mathematics</option>
-                          <option>Portuguese</option>
-                        </select>
-                      </li>
                     </ul>
                   </div>
                   <button type="button" class="btn btn-default" style="color:white">Cal Avg Grade</button>
@@ -110,12 +103,12 @@
       </div>
     </div>
   </div>
-    <footer class="footer">
-      <span class="bottom">&copy; Copyright 2020</span>
-    </footer>
-  
+  <footer class="footer">
+    <span class="bottom">&copy; Copyright 2020</span>
+  </footer>
+
   <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.11.0/d3.js"></script>
-  
+
   <script src="../static/js/app.js"></script>
 </body>
 
