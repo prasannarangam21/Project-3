@@ -1,10 +1,8 @@
 from flask import Flask, jsonify, render_template, request
-
-
-from tensorflow.keras.models import load_model
+from joblib import dump, load
 
 app = Flask(__name__)
-model = load_model('deeplearning.h5')
+model = load('BestLg.joblib')
 
 @app.route("/")
 def home():
@@ -12,7 +10,15 @@ def home():
    
 @app.route("/predict", methods=["POST"])
 def predict():
-    field = request.form.get("field") 
+    
+    school = request.form.get("school") 
+    absences = request.form.get("freetime")
+    age = request.form.get("age") 
+    health = request.form.get("health")
+    Walc = request.form.get("Walc") 
+    goout = request.form.get("goout")
+   
+    result = model.predict()
     return render_template("index.html", result=result)
 
 
