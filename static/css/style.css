@@ -41,6 +41,13 @@ body {
   background-color: #1b3146;
 }
 
+span{
+  display:block;
+  background-color:white;
+  width: 400px; 
+  height: 150px;
+  text-align: center;
+}
 /* The footer is positioned at the bottom of the page */
 
 .footer {
