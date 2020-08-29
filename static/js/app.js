@@ -1,5 +1,4 @@
 var button = d3.select("button")
-console.log(button)
 
 button.on("click", runEnter)
 
@@ -21,16 +20,41 @@ function runEnter(event) {
 
     var responses = [freetime, age, health, Walc, goout]
 
-    console.log(responses);
+    // console.log(responses);
     
     d3.json("/predict",{
-    method: "POST",
-    body: JSON.stringify({responses: responses}),
-    headers: {
-        "content-type": "application/json"
-    }
-}).then(response => {
-console.log(response)})
+        method: "POST",
+        body: JSON.stringify({responses: responses}),
+        headers: {
+            "content-type": "application/json"
+        }
+    }).then(response => {
+        // console.log("Prediction:",response)
+        var data = [
+            {
+                domain: { x: [0, 1], y: [0, 1] },
+                value: response.result,
+                title: { text: "Student Performance" },
+                type: "indicator",
+                mode: "gauge+number",
+                delta: { reference: response.result },
+                gauge: {
+                    bar: { color: "#1b3146" },
+                    axis: { range: [0, 4] },
+                    steps: [
+                        { range: [0, 1], color: "#DCDCDC" },
+                        { range: [1, 2], color: "#D3D3D3" },
+                        { range: [2, 3], color: "#C0C0C0" },
+                        { range: [3, 4], color: "#A9A9A9" }
+                    ]
+                } 
+            }
+        ];
+        
+        var layout = { width: 400, height: 300, margin: { t: 0, b: 0 } };
+
+        Plotly.newPlot('gauge', data, layout);
+
+        d3.select("#recommendation").insert("p").html(`<span>The predicted final grade level is ${response.result}.</span>`);
+    })
 }
-
-
