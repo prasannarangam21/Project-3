@@ -1,3 +1,13 @@
+d3.json("/predict",{
+    method: "POST",
+    body: JSON.stringify({responses: result}),
+    headers: {
+        "content-type": "application/json"
+    }
+}).then(response => {
+console.log(response)})
+
+
 /// Assign the data from `data.js` to a descriptive variable
 var tableData = data;
 

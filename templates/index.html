@@ -46,11 +46,11 @@
                       </li> -->
                       <li class="filter list-group-item">
                         <label for="absences">Enter Freetime</label>
-                        <input class="form-control" id="absences" type="number" placeholder="0" min="0" max="93">
+                        <input class="form-control" id="freetime" type="number" placeholder="0" min="0" max="93">
                       </li>
                       <li class="filter list-group-item">
                         <label for="age">Enter age</label>
-                        <select class="form-control" id="">
+                        <select class="form-control" id="age">
                           <option>15</option>
                           <option>16</option>
                           <option>17</option>
@@ -63,7 +63,7 @@
                       </li>
                       <li class="filter list-group-item">
                         <label for="health">Enter Health Status<br> (1-very bad to 5-very good)</label>
-                        <select class="form-control" id="">
+                        <select class="form-control" id="health">
                           <option>1</option>
                           <option>2</option>
                           <option>3</option>
@@ -73,7 +73,7 @@
                       </li>
                       <li class="filter list-group-item">
                         <label for="Walc">Enter Weekend Alcohol Consumption<br> (1-very low to 5-very high)</label>
-                        <select class="form-control" id="">
+                        <select class="form-control" id="Walc">
                           <option>1</option>
                           <option>2</option>
                           <option>3</option>
@@ -83,7 +83,7 @@
                       </li>
                       <li class="filter list-group-item">
                         <label for="goout">Enter the outing<br> (1-very low to 5-very high)</label>
-                        <select class="form-control" id="">
+                        <select class="form-control" id="goout">
                           <option>1</option>
                           <option>2</option>
                           <option>3</option>
@@ -103,6 +103,12 @@
       </div>
     </div>
   </div>
+
+  <!-- prediction -->
+  <div id=prediction>
+    <h3>{{ result }}</h3>
+  </div>
+
   <footer class="footer">
     <span class="bottom">&copy; Copyright 2020</span>
   </footer>

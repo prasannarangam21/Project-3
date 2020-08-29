@@ -11,12 +11,21 @@ def home():
 @app.route("/predict", methods=["POST"])
 def predict():
     
-    school = request.form.get("school") 
-    absences = request.form.get("freetime")
-    age = request.form.get("age") 
-    health = request.form.get("health")
-    Walc = request.form.get("Walc") 
-    goout = request.form.get("goout")
+    # when form is submitted
+    if request.method == 'POST':
+
+        freetime = request.form.get("freetime")
+        age = request.form.get("age") 
+        health = request.form.get("health")
+        Walc = request.form.get("Walc") 
+        goout = request.form.get("goout")
+    
+        responses = [freetime, age, health, Walc, goout]
+        
+        # convert to integers
+        response = request.get_json()
+        for r in response["responses"]:
+            r = int(r)
    
     result = model.predict()
     return render_template("index.html", result=result)
