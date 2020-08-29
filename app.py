@@ -22,13 +22,15 @@ def predict():
     
         responses = [freetime, age, health, Walc, goout]
         
+        return responses
+
         # convert to integers
-        response = request.get_json()
-        for r in response["responses"]:
-            r = int(r)
+        # response = request.get_json()
+        # for r in response["responses"]:
+        #     r = int(r)
    
-    result = model.predict()
-    return render_template("index.html", result=result)
+    # responses = model.predict(responses)
+    return render_template("index.html", result=responses)
 
 
 if __name__ == "__main__":
