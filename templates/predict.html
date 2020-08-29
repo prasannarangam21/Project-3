@@ -109,22 +109,22 @@
           </aside>
           
         </div>
-        
+        <div class="col-md-8">
+          <div id="prediction" style="padding-top:80px ; padding-left:100px">
+            <div id="gauge"></div>
+          </div>
+          <div id="recommendation" style="padding-top:80px ; padding-left:100px"></div>
+        </div>
       </div>
     </div>
     
-  </div>
-
-  <div id="prediction">
-    {% if result %}
-    <h3>{{ result }}</h3>
-    {% endif %}
   </div>
   <!-- <footer class="footer">
     <span class="bottom">&copy; Copyright 2020</span>
   </footer> -->
 
   <script src="https://d3js.org/d3.v6.min.js"></script>
+  <script src="https://cdn.plot.ly/plotly-latest.min.js" charset="utf-8"></script>
 
   <script src="../static/js/app.js"></script>
 </body>
