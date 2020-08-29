@@ -41,7 +41,7 @@ body {
   background-color: #1b3146;
 }
 
-span{
+p > span{
   display:block;
   background-color:white;
   width: 400px; 
