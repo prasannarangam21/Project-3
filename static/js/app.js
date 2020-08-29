@@ -54,7 +54,8 @@ function runEnter(event) {
         var layout = { width: 400, height: 300, margin: { t: 0, b: 0 } };
 
         Plotly.newPlot('gauge', data, layout);
-
-        d3.select("#recommendation").insert("p").html(`<span>The predicted final grade level is ${response.result}.</span>`);
+        
+        d3.select("#recommendation").html('')
+        d3.select("#recommendation").html(`<p><span>The predicted final grade level is ${response.result}.</span></p>`);
     })
 }
