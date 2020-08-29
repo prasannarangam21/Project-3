@@ -95,7 +95,7 @@
                       </li>
                     </ul>
                   </div>
-                  <button type="button" class="btn btn-default" onclick="runEnter()" style="color:white">Cal Avg Grade</button>
+                  <button type="button" class="btn btn-default" style="color:white">Cal Avg Grade</button>
                   <!-- <input class="form-control" id="city" type="text" placeholder=""> -->
                   
                 </form>
@@ -112,14 +112,16 @@
     
   </div>
 
-  <div id=prediction>
+  <div id="prediction">
+    {% if result %}
     <h3>{{ result }}</h3>
+    {% endif %}
   </div>
   <!-- <footer class="footer">
     <span class="bottom">&copy; Copyright 2020</span>
   </footer> -->
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.11.0/d3.js"></script>
+  <script src="https://d3js.org/d3.v6.min.js"></script>
 
   <script src="../static/js/app.js"></script>
 </body>

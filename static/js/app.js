@@ -1,10 +1,11 @@
 var button = d3.select("button")
+console.log(button)
 
 button.on("click", runEnter)
 
-function runEnter() {
+function runEnter(event) {
 
-    d3.event.preventDefault();
+    event.preventDefault();
 
     var freetimeEl = d3.select("#freetime")
     var ageEl = d3.select("#age")
