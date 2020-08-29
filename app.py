@@ -27,7 +27,12 @@ def predict():
         newconverted = np.array([converted])
         result = model.predict(newconverted)
 
-
+@app.route("/model")
+def inro():
+    return render_template("predict.html")
+@app.route("/visualizations")
+def viz():
+    return render_template("visualizations.html")
     return jsonify({"result":int(result[0])})
     
 
