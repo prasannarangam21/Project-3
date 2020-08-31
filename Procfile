@@ -1,1 +1,1 @@
-web: gunicorn student-data-analysis.app:app
+web: gunicorn app:app
