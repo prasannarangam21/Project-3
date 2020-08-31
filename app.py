@@ -8,7 +8,11 @@ model = load('BestLg.joblib')
 @app.route("/")
 def home():
     return render_template("index.html")
-   
+
+@app.route("/model")
+def prediction():
+    return render_template("predict.html")
+
 @app.route("/predict", methods=["POST"])
 def predict():
     
@@ -26,14 +30,12 @@ def predict():
 
         newconverted = np.array([converted])
         result = model.predict(newconverted)
+    return jsonify({"result":int(result[0])})
 
-@app.route("/model")
-def inro():
-    return render_template("predict.html")
 @app.route("/visualizations")
 def viz():
     return render_template("visualizations.html")
-    return jsonify({"result":int(result[0])})
+    
     
 
 
