@@ -8,18 +8,27 @@ model = load('BestLg.joblib')
 @app.route("/")
 def home():
     return render_template("index.html")
+<<<<<<< HEAD
     
+=======
+>>>>>>> 4b5319f788d5d867b40fdedc6305bc8bac461e23
 
 @app.route("/model")
 def prediction():
     return render_template("predict.html")
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 4b5319f788d5d867b40fdedc6305bc8bac461e23
 @app.route("/summary")
 def summary():
     return render_template("summary.html")
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 4b5319f788d5d867b40fdedc6305bc8bac461e23
 @app.route("/predict", methods=["POST"])
 def predict():
     
@@ -42,6 +51,10 @@ def predict():
 @app.route("/visualizations")
 def viz():
     return render_template("visualizations.html")
+<<<<<<< HEAD
+=======
+    
+>>>>>>> 4b5319f788d5d867b40fdedc6305bc8bac461e23
     
 
 if __name__ == "__main__":

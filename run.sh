@@ -1,0 +1,1 @@
+FLASK_APP=student-data-analysis/app.py flask run
