@@ -13,6 +13,10 @@ def home():
 def prediction():
     return render_template("predict.html")
 
+@app.route("/summary")
+def summary():
+    return render_template("summary.html")
+
 @app.route("/predict", methods=["POST"])
 def predict():
     
