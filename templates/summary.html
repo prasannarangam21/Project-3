@@ -2,52 +2,56 @@
 <html>
 
 <head>
-  <meta charset="utf-8">
-  <title>Index</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-  <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
-  <link rel="stylesheet" href="../static/css/style.css">
+    <meta charset="utf-8">
+    <title>Index</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+    <link rel="stylesheet" href="../static/css/style.css">
 </head>
 
 <body>
-  <nav class="navbar navbar-dark">
-    <div class="container-fluid">
-      <div class="navbar-header">
-        <a class="navbar-brand" href="intro.html">STUDENT DATA ANALYSIS
-        </a>
-      </div>
-      <ul class="navbar-nav ml-auto">
-        <li class="nav-item">
-          <a class="navbar-brand" href="visualizations.html">VISUALIZATIONS</a>
-        </li>
-        
-      </ul>
-      <span class="navbar-text">
-        <a class="navbar-brand" href="index.html">PREDICTION MODEL</a>
-      </span>
-    </div>
-  </nav>
+    <nav class="navbar navbar-dark">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="/">STUDENT DATA ANALYSIS
+                </a>
+            </div>
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="navbar-brand" href="/visualizations">VISUALIZATIONS</a>
+                </li>
+
+            </ul>
+            <span class="navbar-text">
+                <a class="navbar-brand" href="/model">PREDICTION MODEL</a>
+            </span>
+            <span class="navbar-text">
+                <a class="navbar-brand" href="/summary">SUMMARY</a>
+            </span>
+        </div>
+    </nav>
 
   <div class ="container-md"> 
   <div class="jumbotron">
     <h1>Predicting Final Grades with Machine Learning</h1>
-    <h7>By Leah Stucky, Lakshmi Prasanna Rangam, Ju A Han, Jake Andrasovsky</h7>
+    <h7>By Jake Andrasovsky,Ju A Han,Lakshmi Prasanna Rangam,Leah Stucky</h7>
 
     <hr><h2>Data Set</h2>
-    <p>The data used for this project was collected from a study done on 2 Portuguese schools (reference below). The Data was made up of 31 attributes and 3 performance measurements. Our group applied several machine learning models towards the data in the hopes of predicting final year scores(G3). </p><img src="imgs\Data.jpg"class="img-thumbnail"  width="1000">
+    <p>The data used for this project was collected from a study done on 2 Portuguese schools (reference below). The Data was made up of 31 attributes and 3 performance measurements. Our group applied several machine learning models towards the data in the hopes of predicting final year scores(G3). </p> <img src="{{ url_for('static', filename='images/Data.JPG') }}" alt="cable img" class="img-fluid">
     <hr>
     <h2>Data Transformation</h2>
     <div class="row">
     <p class="col-md-6">Originally, we used all 31 attributes of the data to test on the machine learning model. This method had lower than expected data test scores and predicting student performance would be difficult. At this point we decided to make two transformations to the data set. The first was to focus on the top 5 weighted attributes which we determined from random forest classifier and the second was to focus the final scores into 4 performance groups rather than the original 20 scores. </p>
     <div class="col-md-6">
       <div class="thumbnail">
-        <a href="imgs\gradeloop.jpg">
-          <img src="imgs\gradeloop.jpg" alt="Nature" style="width:90%">
+        <!-- <a href="imgs/gradeloop.JPG"> -->
+          <!-- <img src="imgs/gradeloop.JPG" alt="Nature" style="width:90%"> -->
+          <img src="{{ url_for('static', filename='images/gradeloop.JPG') }}" alt="cable img" class="img-fluid">
           <div class="caption">
             <p>Grade transformation to performace groups</p>
           </div>
-        </a>
+        <!-- </a> -->
       </div>
     
     </div>
@@ -70,12 +74,13 @@
       <div class="row">
       <div class="col-md-4">
         <div class="thumbnail">
-          <a href="imgs\KNN.jpg">
-            <img src="imgs\KNN.jpg" alt="Nature" style="width:100%">
+          <!-- <a href="imgs/KNN.JPG"> -->
+            <!-- <img src="imgs/KNN.JPG" alt="Nature" style="width:100%"> -->
+            <img src="{{ url_for('static', filename='images/KNN.JPG') }}" alt="cable img" class="img-fluid">
             <div class="caption">
               <p>K Nearest Neighbors</p>
             </div>
-          </a>
+          <!-- </a> -->
         </div>
       </div>
     </div>
@@ -83,12 +88,13 @@
     <P>The last model we attempted was the Sequential model from TensorFlow. The accuracy of this model was not as high as the other models and we choose not to use this model in our application. </P>
     <div class="col-md-12">
       <div class="thumbnail">
-        <a href="imgs\DL.jpg">
-          <img src="imgs\DL.jpg" alt="Nature" style="width:75%">
+        <!-- <a href="imgs/DL.JPG"> -->
+          <!-- <img src="imgs/DL.JPG" alt="Nature" style="width:75%"> -->
+          <img src="{{ url_for('static', filename='images/DL.JPG') }}" alt="cable img" class="img-fluid">
           <div class="caption">
             <p>Deap Learning Model</p>
           </div>
-        </a>
+        <!-- </a> -->
       </div>
 
 
@@ -102,9 +108,9 @@
     <hr>
   </div>
   </div>
-  <!-- <footer class="footer">
-    <span class="bottom">&copy; Copyright 2020</span>
-  </footer> -->
+  <footer class="footer">
+    <span class="bottom">&copy; Data bootcamp 2020</span>
+  </footer>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.11.0/d3.js"></script>
 
