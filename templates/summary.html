@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Index</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+  <link rel="stylesheet" href="../static/css/style.css">
+</head>
+
+<body>
+  <nav class="navbar navbar-dark">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="intro.html">STUDENT DATA ANALYSIS
+        </a>
+      </div>
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="navbar-brand" href="visualizations.html">VISUALIZATIONS</a>
+        </li>
+        
+      </ul>
+      <span class="navbar-text">
+        <a class="navbar-brand" href="index.html">PREDICTION MODEL</a>
+      </span>
+    </div>
+  </nav>
+
+  <div class ="container-md"> 
+  <div class="jumbotron">
+    <h1>Predicting Final Grades with Machine Learning</h1>
+    <h7>By Leah Stucky, Lakshmi Prasanna Rangam, Ju A Han, Jake Andrasovsky</h7>
+
+    <hr><h2>Data Set</h2>
+    <p>The data used for this project was collected from a study done on 2 Portuguese schools (reference below). The Data was made up of 31 attributes and 3 performance measurements. Our group applied several machine learning models towards the data in the hopes of predicting final year scores(G3). </p><img src="imgs\Data.jpg"class="img-thumbnail"  width="1000">
+    <hr>
+    <h2>Data Transformation</h2>
+    <div class="row">
+    <p class="col-md-6">Originally, we used all 31 attributes of the data to test on the machine learning model. This method had lower than expected data test scores and predicting student performance would be difficult. At this point we decided to make two transformations to the data set. The first was to focus on the top 5 weighted attributes which we determined from random forest classifier and the second was to focus the final scores into 4 performance groups rather than the original 20 scores. </p>
+    <div class="col-md-6">
+      <div class="thumbnail">
+        <a href="imgs\gradeloop.jpg">
+          <img src="imgs\gradeloop.jpg" alt="Nature" style="width:90%">
+          <div class="caption">
+            <p>Grade transformation to performace groups</p>
+          </div>
+        </a>
+      </div>
+    
+    </div>
+    </div>
+    
+    <hr><h2>Machine Learning Models</h2>
+
+
+    <h3>Logistic Regression</h3>
+    <p>The first model we tested on the data set was Logistic Regression and was ultimately the model saved and used for our application. After some data transformation and retesting we chose this model because it scored higher than the other models tested.</p> 
+
+    <h3>Decision Tree and Random Forest</h3>
+    <p>The second model we tested the data on was SKlearn's Decision Tree combined with Random Forest. This model scored slightly less Logistic Regression but was helpful in transforming our data set by determining feature importance. We used feature importance to narrow down our data set parameters to the top 5 weighted attributes. </p>
+
+    
+    
+    <h3>K Nearest Neighbors</h3>
+    
+      <P>The K Nearest Neighbors had solid test scores and would have been fine to use had we not gone with the Logistic Regression model. This model begins to elbow out at 9 groups as seen in the graph.   </P>
+      <div class="row">
+      <div class="col-md-4">
+        <div class="thumbnail">
+          <a href="imgs\KNN.jpg">
+            <img src="imgs\KNN.jpg" alt="Nature" style="width:100%">
+            <div class="caption">
+              <p>K Nearest Neighbors</p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+    <h3>Deep Learning</h3>
+    <P>The last model we attempted was the Sequential model from TensorFlow. The accuracy of this model was not as high as the other models and we choose not to use this model in our application. </P>
+    <div class="col-md-12">
+      <div class="thumbnail">
+        <a href="imgs\DL.jpg">
+          <img src="imgs\DL.jpg" alt="Nature" style="width:75%">
+          <div class="caption">
+            <p>Deap Learning Model</p>
+          </div>
+        </a>
+      </div>
+
+
+    <hr>
+
+    <hr><h2>References and Inspiration for this Project</h2>
+
+    <P>Database and Study: <br>
+      Cortez and A. Silva. Using Data Mining to Predict Secondary School Student Performance. In A. Brito and J. Teixeira Eds., Proceedings of 5th Future Business Technology Conference (FUBUTEC 2008) pp. 5-12, Porto, Portugal, April, 2008, EUROSIS, ISBN 978-9077381-39-7.</p>
+    <p>Prediction of Student Performance by Lee Min Hua & Mohamad Najmudin - https://rpubs.com/mhlee/student-performance-prediction</p>
+    <hr>
+  </div>
+  </div>
+  <!-- <footer class="footer">
+    <span class="bottom">&copy; Copyright 2020</span>
+  </footer> -->
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.11.0/d3.js"></script>
+
+  <script src="../static/js/app.js"></script>
+</body>
+
+</html>
