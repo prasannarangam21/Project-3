@@ -8,9 +8,9 @@ function runEnter(event) {
 
     var freetimeEl = d3.select("#freetime")
     var studytimeEl = d3.select("#studytime")
-    var healthEl = d3.select('#health')
+    var healthEl = d3.select("#health")
     var WalcEl = d3.select("#Walc")
-    var gooutEl = d3.select('#goout')
+    var gooutEl = d3.select("#goout")
 
     var freetime = freetimeEl.property("value")
     var studytime = studytimeEl.property("value")
