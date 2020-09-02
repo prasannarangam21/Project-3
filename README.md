@@ -1,8 +1,8 @@
 # Project 3
 Group members
 * Jake Andrasovsky
-* Lakshmi Prasana Rangam
 * Jua Han
+* Lakshmi Prasanna Rangam
 * Leah Stucky
 ## Project Overview:
 We created several models to predict academic achievement based off the various factors we find are most influential. We ran analysis on the data and provided some visualizations. We deployed our findings on Heroku and included a form where the user can input new data that runs through our model and predict the grade score.
@@ -13,4 +13,5 @@ Source: https://archive.ics.uci.edu/ml/datasets/student+performance
 We created machine learning models - Logistic Regression, Decision Trees , Random Forests and Deep Learning - to find out which model has the highest accuracy. We chose to use the Logistic Regression model which has the highest accuracy of 0.67 to predict the student performance.
 The five most influential factors were free time, age, health status, weekend alcohol consumption, going out with friends, which we later integrated into our final model to make the prediction.
 ## Related Links:
+Link to tableau public : https://public.tableau.com/views/Project-3_15988189818690/StudentPerformanceAnalysis?:language=en&:display_count=y&publish=yes&:origin=viz_share_link
 Link to access the student performance analysis: https://student-data-analysis.herokuapp.com/
