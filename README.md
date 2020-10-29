@@ -6,6 +6,9 @@ Group members
 * Leah Stucky
 ## Project Overview:
 We created several models to predict academic achievement based off the various factors we find are most influential. We ran analysis on the data and provided some visualizations. We deployed our findings on Heroku and included a form where the user can input new data that runs through our model and predict the grade score.
+
+![grade](images/calculator.PNG)
+
 ## Data:
 Two datasets are provided regarding the performance in two subjects: Mathematics (mat) and Portuguese language (por). Each contains student academic performance and contributing factors including age, sex, parental education level, study time, and various other demographic and social attributes (30 in total). The data was acquired using school reports and student questionaires for two schools in Portugal. We combined the two datasets (total of 1044 rows) to create machine learning models and visualizations.
 Source: https://archive.ics.uci.edu/ml/datasets/student+performance
@@ -15,3 +18,5 @@ The five most influential factors were free time, age, health status, weekend al
 ## Related Links:
 Link to tableau public : https://public.tableau.com/views/Project-3_15988189818690/StudentPerformanceAnalysis?:language=en&:display_count=y&publish=yes&:origin=viz_share_link
 Link to access the student performance analysis: https://student-data-analysis.herokuapp.com/
+
+![viz](images/viz.PNG)
